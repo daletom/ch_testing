@@ -1,6 +1,7 @@
 {
   "routes": [
   	{
+      "src": "/*",
   		"headers": {
   		  "Accept-CH": "DPR, Width, Viewport-Width",
   		  "Feature-Policy": "ch-dpr imgix.tomdale.website 'self'; ch-width imgix.tomdale.website 'self'; ch-viewport-width imgix.tomdale.website 'self'"
