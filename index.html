@@ -3,6 +3,15 @@
 <head>
 	<meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width"/>
 	<title>Testing Client-Hints with imgix</title>
+	<style type="text/css">
+		h3 {
+			text-decoration: underline;
+		}
+
+		h4 {
+			font-weight: normal;
+		}
+	</style>
 </head>
 <body>
 <h1>Testing Client-Hints with imgix</h1>
@@ -10,7 +19,7 @@
 <h3>What will I notice different on  Chrome Browser?</h3>
 <h4>On a Chrome browser, you will see that these images will dynamically change size after each refresh.  The images will be 30% the width of the browser when the browser is larger than 768 pixels.  Below 768 pixels, the image will be 100% the width of the browser.</h3>
 <h3>How Am I achieving this?</h3>
-<h4>I am using imgix with the following api: ch=width,dpr.  Also, with security changes made by chrome I am setting a Feature-Policy header in my vercel.json file to identify which image domains I will use for this.</h4>
+<h4>I am using imgix with the following api: ch=width,dpr. Also, because of Chrome’s security settings, I am setting a Feature-Policy header in my vercel.json file to identify which image domains I will use for this.</h4>
 <img src="https://imgix.tomdale.website/artsy/5.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges&auto=format,compress" sizes="(min-width: 768px) 30vw, 100vw" />
 <img src="https://imgix.tomdale.website/artsy/6.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges&auto=format,compress" sizes="(min-width: 768px) 30vw, 100vw" />
 <img src="https://imgix.tomdale.website/artsy/7.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges&auto=format,compress" sizes="(min-width: 768px) 30vw, 100vw" />
