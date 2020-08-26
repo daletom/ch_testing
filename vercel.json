@@ -4,7 +4,7 @@
       "src": "/*",
   		"headers": {
   		  "Accept-CH": "DPR, Width, Viewport-Width",
-  		  "Feature-Policy": "ch-dpr imgix.tomdale.website 'self'; ch-width imgix.tomdale.website 'self'; ch-viewport-width imgix.tomdale.website 'self'"
+  		  "Feature-Policy": "ch-dpr https://imgix.tomdale.website 'self'; ch-width https://imgix.tomdale.website 'self'; ch-viewport-width https://imgix.tomdale.website 'self'"
   		}
   	}
   ]
