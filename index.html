@@ -1,13 +1,24 @@
+<!DOCTYPE html>
+<html>
 <head>
 	<meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width"/>
+	<title>Testing Client-Hints with imgix</title>
 </head>
-<h1>Testing CH 2</h1>
-<img src="https://imgix.tomdale.website/artsy/5.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges" sizes="(min-width: 768px) 30vw, 100vw" />
-<img src="https://imgix.tomdale.website/artsy/6.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges" sizes="(min-width: 768px) 30vw, 100vw" />
-<img src="https://imgix.tomdale.website/artsy/7.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges" sizes="(min-width: 768px) 30vw, 100vw" />
-<img src="https://imgix.tomdale.website/artsy/8.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges" sizes="(min-width: 768px) 30vw, 100vw" />
-<img src="https://imgix.tomdale.website/artsy/9.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges" sizes="(min-width: 768px) 30vw, 100vw" />
-<img src="https://imgix.tomdale.website/artsy/10.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges" sizes="(min-width: 768px) 30vw, 100vw" />
-<img src="https://imgix.tomdale.website/artsy/11.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges" sizes="(min-width: 768px) 30vw, 100vw" />
-<img src="https://imgix.tomdale.website/artsy/12.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges" sizes="(min-width: 768px) 30vw, 100vw" />
-<img src="https://imgix.tomdale.website/artsy/13.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges" sizes="(min-width: 768px) 30vw, 100vw" />
+<body>
+<h1>Testing Client-Hints with imgix</h1>
+<h3>These images have a width of 400 set, but are using Client Hints DPR & Width which will over-ride the 400 width on a Chrome browser.</h3>
+<h3>What will I notice different on  Chrome Browser?</h3>
+<h4>On a Chrome browser, you will see that these images will dynamically change size after each refresh.  The images will be 30% the width of the browser when the browser is larger than 768 pixels.  Below 768 pixels, the image will be 100% the width of the browser.</h3>
+<h3>How Am I achieving this?</h3>
+<h4>I am using imgix with the following api: ch=width,dpr.  Also, with security changes made by chrome I am setting a Feature-Policy header in my vercel.json file to identify which image domains I will use for this.</h4>
+<img src="https://imgix.tomdale.website/artsy/5.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges&auto=format,compress" sizes="(min-width: 768px) 30vw, 100vw" />
+<img src="https://imgix.tomdale.website/artsy/6.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges&auto=format,compress" sizes="(min-width: 768px) 30vw, 100vw" />
+<img src="https://imgix.tomdale.website/artsy/7.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges&auto=format,compress" sizes="(min-width: 768px) 30vw, 100vw" />
+<img src="https://imgix.tomdale.website/artsy/8.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges&auto=format,compress" sizes="(min-width: 768px) 30vw, 100vw" />
+<img src="https://imgix.tomdale.website/artsy/9.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges&auto=format,compress" sizes="(min-width: 768px) 30vw, 100vw" />
+<img src="https://imgix.tomdale.website/artsy/10.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges&auto=format,compress" sizes="(min-width: 768px) 30vw, 100vw" />
+<img src="https://imgix.tomdale.website/artsy/11.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges&auto=format,compress" sizes="(min-width: 768px) 30vw, 100vw" />
+<img src="https://imgix.tomdale.website/artsy/12.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges&auto=format,compress" sizes="(min-width: 768px) 30vw, 100vw" />
+<img src="https://imgix.tomdale.website/artsy/13.jpg?ch=width,dpr&w=400&ar=4:3&fit=crop&crop=faces,edges&auto=format,compress" sizes="(min-width: 768px) 30vw, 100vw" />
+</body>
+</html>
