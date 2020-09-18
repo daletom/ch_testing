@@ -33,3 +33,5 @@ I enjoy using both Vercel & Netlify to deploy my sites.  They both have a lot of
 
 You should obviously change that url to the url you are using for your images to make this work.  But, in order to serve Client Hints safely, this isn't that big of an effort to add.
 
+# Article on Dev.to
+Find the full article on [Dev.to](https://dev.to/daletom/client-hints-is-back-deploy-with-imgix-vercel-4abb)
